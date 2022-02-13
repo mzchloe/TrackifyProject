@@ -1,0 +1,102 @@
+body {
+    padding: 50px;
+    height: 100vh;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: #FBF6F0;
+    background: linear-gradient(0deg, rgba(255,164,91,1) 0%, rgba(255,218,119,1) 100%);
+  }
+
+  nav {
+    width: 500px;
+    margin-left: auto;
+  }
+
+  /* Signup Form */
+ul li {
+    list-style-type: none;
+    margin-left: -40px;
+    margin-top: 10px;
+  }
+  
+    ul li button {
+      margin-left: auto;
+      padding: 10px 16px;
+      border: none;
+      background: #FBF6F0;
+      color: #FFA45B;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      font-weight: bold;
+      border-radius: 12px;
+      width: 205px;
+      
+    }
+  
+  .signup-box {
+    padding: 20px;
+  }
+  
+  .signup-box h2 {
+    text-transform: uppercase;
+    
+  }
+
+  .signup-container li input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #FBF6F0;
+    border-radius: 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 200px;
+  }
+  
+  .signup-container input:focus {
+    outline: none;
+    color: #FBF6F0;
+    text-transform: lowercase;
+    padding-left: 10px;
+  }
+  
+  .signup-container input, select, text{
+    color: #FBF6F0;
+    padding-left: 10px;
+  }
+  
+  ::placeholder {
+    color: #FBF6F0;
+    padding-left: 5px;
+  }
+
+
+/* Login form */
+  .login-container {
+    padding: 20px;
+  }
+  
+  .login-container input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #FBF6F0;
+    border-radius: 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 200px;
+  }
+  
+  .login-container input:focus {
+    outline: none;
+    color: #FBF6F0;
+    text-transform: lowercase;
+    padding-left: 10px;
+  }
+  
+  .login-container input, select, text{
+    color: #FBF6F0;
+    padding-left: 10px;
+  }
+  
+  ::placeholder {
+    color: #FBF6F0;
+    padding-left: 5px;
+  }

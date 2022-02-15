@@ -45,13 +45,6 @@ router.post("/login", async (req, res) => {
 });
 
 //profile page
-<<<<<<< HEAD
-router.get("/profile", (req, res) => {
-  res.render("profile");
-});
-
-module.exports = router;
-=======
 router.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");
 });
@@ -63,4 +56,3 @@ router.get("/logout", (req, res) => {
 });
 
 module.exports = router;
->>>>>>> d1715ccdd71d10be1f2d782dfcd7c7356c4f0a9e

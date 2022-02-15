@@ -23,8 +23,20 @@ app.use(express.urlencoded({ extended: false }));
 // hooking up the public folder
 app.use(express.static("public"));
 
-// // Handles the ejs
-// const ejs = require('ejs');
+app.use(
+    session({
+      secret: "helloworld",
+      resave: true,
+      saveUninitialized: false,
+      cookie: {
+        httpOnly: true,
+        maxAge: 1200000,
+      },
+      store: store.create({
+        mongoUrl: "mongodb://localhost/trackify-project",
+      }),
+    })
+  );
 
 
 // // ℹ️ This function is getting exported from the config folder. It runs most middlewares

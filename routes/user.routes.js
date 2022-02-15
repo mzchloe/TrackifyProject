@@ -1,11 +1,12 @@
-const router = require('express').Router();
-const bcrypt = require('bcrypt');
-const User = require('../models/user.model')
+const router = require("express").Router();
+const bcrypt = require("bcrypt");
+const User = require("../models/user.model");
+const { isLoggedIn } = require("../middlewares/guard");
 
 // SignUp route
 router.get("/signup", (req, res) => {
-    res.render("signup");
-  });
+  res.render("signup");
+});
 
 // handles the creation of a user
 router.post("/signup", async (req, res) => {
@@ -13,43 +14,39 @@ router.post("/signup", async (req, res) => {
   user.email = req.body.email;
   user.username = req.body.username;
   user.password = await bcrypt.hash(req.body.password, 10);
-  console.log(req.body)
   try {
-    
     await user.save();
     res.redirect("/user/login");
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.redirect("/user/signup");
   }
 });
-
 
 // shows the log in form
 router.get("/login", (req, res) => {
   res.render("login");
 });
 
-
 // handles the authentication of a user
 router.post("/login", async (req, res) => {
   try {
-    // const user = await User.findOne({ email: req.body.email });
-    // const isPwCorrect = await bcrypt.compare(req.body.password, user.password);
-    // if (isPwCorrect) {
-    //   req.session.currentUser = user;
+    const user = await User.findOne({ username: req.body.username });
+    const isPwCorrect = await bcrypt.compare(req.body.password, user.password);
+    if (isPwCorrect) {
+      req.session.currentUser = user;
       res.redirect("/user/profile");
-    // } else {
-    //   res.redirect("/user/login");
-    // }
+    } else {
+      res.redirect("/user/login");
+    }
   } catch (error) {
     res.redirect("/user/login");
   }
 });
 
 //profile page
-router.get("/profile", (req, res) => {
+router.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");
 });
 
-  module.exports = router;
+module.exports = router;

@@ -20,4 +20,26 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+
+// shows the log in form
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
+
+// handles the authentication of a user
+router.post("/login", async (req, res) => {
+  try {
+    // const user = await User.findOne({ email: req.body.email });
+    // const isPwCorrect = await bcrypt.compare(req.body.password, user.password);
+    // if (isPwCorrect) {
+    //   req.session.currentUser = user;
+      res.redirect("/user/profile");
+    // } else {
+    //   res.redirect("/user/login");
+    // }
+  } catch (error) {
+    res.redirect("/user/login");
+  }
+});
   module.exports = router;

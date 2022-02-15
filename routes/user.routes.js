@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
 
 //profile page
 router.get("/profile", (req, res) => {
-  res.render("signup");
+  res.render("profile");
 });
 
-  module.exports = router;
+module.exports = router;

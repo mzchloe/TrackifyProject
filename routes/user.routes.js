@@ -42,4 +42,10 @@ router.post("/login", async (req, res) => {
     res.redirect("/user/login");
   }
 });
+
+//profile page
+router.get("/profile", (req, res) => {
+  res.render("signup");
+});
+
   module.exports = router;

@@ -2,7 +2,7 @@
 // require('dotenv/config');
 
 // // ℹ️ Connects to the database
-require('./db');
+require("./db");
 
 // Handles http requests (express is node js framework)
 const express = require("express");
@@ -24,41 +24,45 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 app.use(
-    session({
-      secret: "helloworld",
-      resave: true,
-      saveUninitialized: false,
-      cookie: {
-        httpOnly: true,
-        maxAge: 1200000,
-      },
-      store: store.create({
-        mongoUrl: "mongodb://localhost/trackify-project",
-      }),
-    })
-  );
+  session({
+    secret: "helloworld",
+    resave: true,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      maxAge: 1200000,
+    },
+    store: store.create({
+      mongoUrl: "mongodb://localhost/trackify-project",
+    }),
+  })
+);
 
+// middle ware for making the user available to all templates
+app.use((req, res, next) => {
+  res.locals.currentUser = req.session.currentUser;
+  next();
+});
 
 // // ℹ️ This function is getting exported from the config folder. It runs most middlewares
 // // require('./config')(app);
 
 // default value for title local
-const projectName = 'project-trackify';
-const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
+const projectName = "project-trackify";
+const capitalized = (string) =>
+  string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)}- Ironhack Project 2 - Trackify`;
 
-
 // 👇 Start handling routes here
-const index = require('./routes/index');
-app.use('/', index);
+const index = require("./routes/index");
+app.use("/", index);
 
 //User Route
-const userRouter = require('./routes/user.routes');
-app.use('/user', userRouter);
+const userRouter = require("./routes/user.routes");
+app.use("/user", userRouter);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
-require('./error-handling')(app);
+require("./error-handling")(app);
 
 module.exports = app;
-

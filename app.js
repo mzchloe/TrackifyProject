@@ -1,24 +1,34 @@
-// ℹ️ Gets access to environment variables/settings
-// https://www.npmjs.com/package/dotenv
-require('dotenv/config');
+// // ℹ️ Gets access to environment variables/settings
+// // https://www.npmjs.com/package/dotenv
+// require('dotenv/config');
 
-// ℹ️ Connects to the database
-require('./db');
+// // ℹ️ Connects to the database
+// require('./db');
 
 // Handles http requests (express is node js framework)
-// https://www.npmjs.com/package/express
-const express = require('express');
-
-// Handles the ejs
-const ejs = require('ejs');
-
+const express = require("express");
+const mongoose = require("mongoose");
+const expressLayouts = require("express-ejs-layouts");
+const session = require("express-session");
+const store = require("connect-mongo");
+const dotenv = require("dotenv");
 const app = express();
+// template engine setup
+app.set("view engine", "ejs");
+// ejs layout setup
+app.use(expressLayouts);
 
-//Require our routers
-const userRouter = require('./routes/user.routes')
+// middleware to extract the body from the request
+app.use(express.urlencoded({ extended: false }));
+// hooking up the public folder
+app.use(express.static("public"));
 
-// ℹ️ This function is getting exported from the config folder. It runs most middlewares
-require('./config')(app);
+// // Handles the ejs
+// const ejs = require('ejs');
+
+
+// // ℹ️ This function is getting exported from the config folder. It runs most middlewares
+// // require('./config')(app);
 
 // default value for title local
 const projectName = 'project-trackify';
@@ -32,10 +42,11 @@ const index = require('./routes/index');
 app.use('/', index);
 
 //User Route
-app.use('/user', userRouter)
+const userRouter = require('./routes/user.routes');
+app.use('/user', userRouter);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
-require('./error-handling')(app);
+// require('./error-handling')(app);
 
 module.exports = app;
 

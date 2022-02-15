@@ -10,12 +10,16 @@ router.get("/signup", (req, res) => {
 // handles the creation of a user
 router.post("/signup", async (req, res) => {
   const user = new User();
-  // user.email = req.body.email;
+  user.email = req.body.email;
+  user.username = req.body.username;
+  user.password = await bcrypt.hash(req.body.password, 10);
+  console.log(req.body)
   try {
-    user.password = await bcrypt.hash(req.body.password, 10);
+    
     await user.save();
     res.redirect("/user/login");
   } catch (error) {
+    console.log(error)
     res.redirect("/user/signup");
   }
 });
@@ -45,7 +49,7 @@ router.post("/login", async (req, res) => {
 
 //profile page
 router.get("/profile", (req, res) => {
-  res.render("signup");
+  res.render("profile");
 });
 
   module.exports = router;

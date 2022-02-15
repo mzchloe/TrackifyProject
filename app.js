@@ -3,7 +3,7 @@
 // require('dotenv/config');
 
 // // ℹ️ Connects to the database
-// require('./db');
+require('./db');
 
 // Handles http requests (express is node js framework)
 const express = require("express");

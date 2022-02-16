@@ -1,23 +1,33 @@
 body {
   padding: 50px;
   height: 100vh;
-  overflow-y: auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #fbf6f0;
   background: linear-gradient(rgba(255, 164, 91) 0%, rgba(255, 218, 119) 100%);
+  /* overflow:hidden; */
 }
 
+/* HEADLINES / Titles */
 h2 {
   color: #fbf6f0;
 }
 
+.headline1 {
+  margin-left: 10px;
+}
+
+.headline2 {
+  margin-left: 10px;
+}
+
+/* LINKS */
 a {
   text-decoration: none;
   color: #fbf6f0;
   font-weight: bolder;
 }
 
-/* Top navigation bar */
+/* NAVIGATION BAR */
 .top-nav {
   position: fixed;
   top: 0;
@@ -39,7 +49,8 @@ nav ul {
   align-items: flex-end;
 }
 
-/* Forms */
+
+/* FORMS */
 ul li {
   list-style-type: none;
   margin-left: -40px;
@@ -101,6 +112,103 @@ text {
   padding-left: 5px;
 }
 
+/* PROFILE PAGE  */
+.profile-page {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  justify-content: space-around;
+}
+
+/* >>User info */
+.user-info {
+  border: 1px solid green;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 20%;
+}
+
+.profile {
+  border: 1px solid yellow;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  height: 150px;
+  width: 100%;
+}
+
+/* >>Dashboard */
+.user-dashboard {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+}
+
+.row {
+  border: 1px solid blue;
+  width: auto;
+  height: auto; 
+  margin: 10px;
+
+}
+
+.report {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.total-cal {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  margin-left: 50px;
+}
+
+.report-btn {
+  margin-top: 30px;
+  align-self: flex-end;
+  height: 20px;
+}
+
+.tracking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.track-btn {
+  border: 1px solid fuchsia;
+  margin: 10px;
+  height: 50px;
+  width: 150px;
+}
+
+.recommendation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.recommendation-btn {
+  border: 1px solid fuchsia;
+  margin: 10px;
+  height: 50px;
+  width: 150px;
+}
+
+/* BUTTONS */
 
 
 /* Footer */

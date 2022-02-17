@@ -5,7 +5,19 @@
   
     <%- include('./partials/tracknutriform'); %>
 
-    <%- include('./partials/nutridata'); %>
+    <h2>profile</h2>
+
+
+    <% if (data) { %>
+      <% data.forEach((record) => { %>
+          <%= record.date %>
+          <% }) %>
+      <!-- <% if (currentUser) { %>
+       <li><a href="/user/profile">Profile</a></li>  
+       <li><a href="/user/logout">Logout</a></li>
+       <% } %> -->
+
+    
 
     <footer>
       <%- include('./partials/footer'); %>

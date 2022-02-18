@@ -1,5 +1,12 @@
+# Dependency directory
 node_modules
-.DS_Store
+
+
+# Environment Variables should NEVER be published
 .env
-DS_Store
-.gitignore
+
+# added for maintainance purposes - not best  practice
+package-lock.json 
+
+#  Mac stuff
+.DS_Store

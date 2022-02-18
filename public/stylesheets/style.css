@@ -27,6 +27,10 @@ a {
   font-weight: bolder;
 }
 
+a.profilelinks {
+  color: #AEE6E6;
+}
+
 /* NAVIGATION BAR */
 .top-nav {
   position: fixed;

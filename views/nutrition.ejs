@@ -7,17 +7,14 @@
 
     <h2>profile</h2>
 
-
-     
-     <%# data.forEach((record) => { %>
-          <%= record.date %>
-          <% }) %>
-       <% if (currentUser) { %> 
-       <% } %> 
-
-
-
-    
+    <ul>
+      <% data.forEach((record) => { %>
+      <li>
+      <%= record.date %>
+   
+    </li>
+      <% }) %>
+    </ul>
 
     <footer>
       <%- include('./partials/footer'); %>

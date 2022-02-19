@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const foodSchema = mongoose.Schema({
-	type: {
+	mealtype: {
 	  type: String,
 	},
 	date: {
@@ -37,4 +37,4 @@ const foodSchema = mongoose.Schema({
 	}
   });
 
-module.exports = mongoose.model("Food", foodSchema);
+module.exports = mongoose.model("FoodItem", foodSchema);

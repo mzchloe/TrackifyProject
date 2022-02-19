@@ -10,7 +10,6 @@ router.get("/tracknutrition", (req, res) => {
 });
 
 router.post("/tracknutrition", isLoggedIn, async (req, res) => {
-  console.log(req.body);
   const diary = new Diary();
   diary.user = req.session.currentUser._id;
   diary.date = req.body.date;
@@ -26,7 +25,7 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
     res.render("nutrition", { data });
   } catch (error) {
     console.log("error");
-  }
+  } 
   //     const diary = Diary()
   //     diary.date = req.body.date
   //     diary.user = req.session._userid

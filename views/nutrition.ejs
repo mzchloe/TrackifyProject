@@ -7,7 +7,11 @@
 
     <h2>profile</h2>
 
-    
+    <% data.forEach((record) => { %>
+      <li>
+        <%= record.foodType %>
+      </li>
+      <% }) %>
 
     <footer>
       <%- include('./partials/footer'); %>

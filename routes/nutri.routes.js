@@ -7,21 +7,21 @@ const { redirect } = require("express/lib/response");
 //Nutrition page
 router.get("/tracknutrition", async (req, res) => {
   //const date = new Date()
-  const date = Date.now()
+  const today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
 
-  //console.log(date)
   const data = await FoodItem.find({
     user: req.session.currentUser._id,
-    date: date,
+    date:{
+      $gt: today
+    },
   });
-  //console.log(data)
   res.render("nutrition", { data });
 });
 
 router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   const foodItem = new FoodItem();
   foodItem.user = req.session.currentUser._id;
-  foodItem.date = req.body.date;
+  foodItem.date = req.body.date
   foodItem.mealType = req.body.mealType;
   foodItem.foodType = req.body.foodType;
   foodItem.portion = req.body.portion;
@@ -30,17 +30,18 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   foodItem.carbs = req.body.carbs;
   foodItem.fat = req.body.fat;
   foodItem.protein = req.body.protein;
-  console.log("date now locale string", new Date().toLocaleDateString())
-  console.log("date now",Date.now())
   try {
     await foodItem.save();
+    const today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
 
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
-      date: Date.parse(Date.now())
-    })
+      date:{
+        $gt: today
+      },
+    });
     
-    res.render("nutrition", { data });
+    res.render("nutrition", {data});
   } catch (error) {
     res.redirect("/nutri/tracknutrition");
   }

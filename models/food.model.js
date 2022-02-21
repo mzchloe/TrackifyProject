@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const foodSchema = mongoose.Schema({
-	mealtype: {
+	mealType: {
 	  type: String,
 	},
 	date: {

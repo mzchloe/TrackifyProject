@@ -4,7 +4,7 @@ const FoodItem = require("../models/food.model");
 const { isLoggedIn } = require("../middlewares/guard");
 const { redirect } = require("express/lib/response");
 
-//Nutrition page
+//Route to display nutrition page
 router.get("/tracknutrition", async (req, res) => {
   //const date = new Date()
   const today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
@@ -18,6 +18,7 @@ router.get("/tracknutrition", async (req, res) => {
   res.render("nutrition", { data });
 });
 
+//Handling the food entry form
 router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   const foodItem = new FoodItem();
   foodItem.user = req.session.currentUser._id;
@@ -30,11 +31,10 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   foodItem.carbs = req.body.carbs;
   foodItem.fat = req.body.fat;
   foodItem.protein = req.body.protein;
-  console.log(req.body)
   try {
     await foodItem.save();
     const today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-
+    //const today = new Date(oldDate.toDateString());
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
       date:{

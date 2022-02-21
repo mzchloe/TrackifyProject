@@ -5,36 +5,36 @@
   
     <%- include('./partials/tracknutriform'); %>
 
-    <h2>profile</h2>
+    <h2>Nutrition Diary</h2>
 
-    <% data.forEach((record) => { %>
-       <span> <%= record.date %></span>
-      <% }) %>
-    </ul>
-    <table> 
-      <tr class="nutrition-column-names">
-        <td>Meal Type</td>
-        <td>Food Item</td>
-        <td>Portion</td>
-        <td>Unit</td>
-        <td>Calories</td>
-        <td>Carbs</td>
-        <td>Fat</td>
-        <td>Protein</td>
-      </tr>
-      <% data.forEach((record) => { %>
-      <tr>
-        <th> <%= record.mealType %></th>
-        <th><%= record.foodType %></th>
-        <th><%= record.portion %></th>
-        <th><%= record.portionUnit %></th>
-        <th><%= record.calories %></th>
-        <th><%= record.carbs %></th>
-        <th><%= record.fat %></th>
-        <th><%= record.protein %></th>
-      </tr>
-      <% }) %>
-    </table>
+   <h3>Breakfast</h3>
+   <table> 
+     <tr class="nutrition-column-names">
+       <td>Date</td>
+       <td>Meal Type</td>
+       <td>Food Item</td>
+       <td>Portion</td>
+       <td>Unit</td>
+       <td>Calories</td>
+       <td>Carbs</td>
+       <td>Fat</td>
+       <td>Protein</td>
+     </tr>
+     <% data.forEach((record) => { %>
+     <tr>
+       <th><%= record.date %></th>
+       <th><%= record.mealType %></th>
+       <th><%= record.foodType %></th>
+       <th><%= record.portion %></th>
+       <th><%= record.portionUnit %></th>
+       <th><%= record.calories %></th>
+       <th><%= record.carbs %></th>
+       <th><%= record.fat %></th>
+       <th><%= record.protein %></th>  
+     </tr>
+     <% }) %>
+   </table>
+
     <footer>
       <%- include('./partials/footer'); %>
     </footer>

@@ -30,6 +30,7 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   foodItem.carbs = req.body.carbs;
   foodItem.fat = req.body.fat;
   foodItem.protein = req.body.protein;
+  console.log(req.body)
   try {
     await foodItem.save();
     const today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());

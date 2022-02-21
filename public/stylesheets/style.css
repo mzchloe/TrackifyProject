@@ -212,6 +212,18 @@ text {
   width: 150px;
 }
 
+/* Daily Nutrition Overview */
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #fbf6f0;
+  padding: 0.5rem;
+  text-align: left;
+  font-weight: normal;
+}
+
 /* BUTTONS */
 
 

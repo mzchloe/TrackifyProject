@@ -8,11 +8,33 @@
     <h2>profile</h2>
 
     <% data.forEach((record) => { %>
-      <li>
-        <%= record.foodType %>
-      </li>
+       <span> <%= record.date %></span>
       <% }) %>
-
+    </ul>
+    <table> 
+      <tr class="nutrition-column-names">
+        <td>Meal Type</td>
+        <td>Food Item</td>
+        <td>Portion</td>
+        <td>Unit</td>
+        <td>Calories</td>
+        <td>Carbs</td>
+        <td>Fat</td>
+        <td>Protein</td>
+      </tr>
+      <% data.forEach((record) => { %>
+      <tr>
+        <th> <%= record.mealType %></th>
+        <th><%= record.foodType %></th>
+        <th><%= record.portion %></th>
+        <th><%= record.portionUnit %></th>
+        <th><%= record.calories %></th>
+        <th><%= record.carbs %></th>
+        <th><%= record.fat %></th>
+        <th><%= record.protein %></th>
+      </tr>
+      <% }) %>
+    </table>
     <footer>
       <%- include('./partials/footer'); %>
     </footer>

@@ -19,6 +19,7 @@
        <td>Fat</td>
        <td>Protein</td>
        <td>Edit</td>
+       <td>Delete</td>
       
      </tr>
      <% data.forEach((record) => { %>
@@ -32,6 +33,10 @@
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
        <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th>
+        <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
+          <button type="submit">delete</button>
+       </th> 
      </tr> 
       <% }%>
      <% }) %>
@@ -49,6 +54,7 @@
        <td>Fat</td>
        <td>Protein</td>
        <td>Edit</td>
+       <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'lunch') { %>
@@ -60,7 +66,11 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th>  
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th>
+        <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
+          <button type="submit">delete</button>
+       </th> 
      </tr> 
       <% }%>
      <% }) %>
@@ -77,6 +87,7 @@
        <td>Fat</td>
        <td>Protein</td>
        <td>Edit</td>
+       <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'dinner') { %>
@@ -89,6 +100,10 @@
        <th><%= record.fat %></th>
        <th><%= record.protein %></th>  
        <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th>
+        <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
+          <button type="submit">delete</button>
+       </th> 
      </tr> 
       <% }%>
      <% }) %>
@@ -106,6 +121,7 @@
        <td>Fat</td>
        <td>Protein</td>
        <td>Edit</td>
+       <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'snack') { %>
@@ -117,7 +133,11 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th>  
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th>
+        <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
+          <button type="submit">delete</button>
+       </th>  
      </tr> 
       <% }%>
      <% }) %>

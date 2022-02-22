@@ -6,11 +6,11 @@
     <%- include('./partials/tracknutriform'); %>
 
     <h2>Nutrition Diary</h2>
+    <p><%= data[0].date.toLocaleDateString() %></p>
 
    <h3>Breakfast</h3>
    <table> 
      <tr class="nutrition-column-names">
-       <td>Date</td>
        <td>Food Item</td>
        <td>Portion</td>
        <td>Unit</td>
@@ -18,18 +18,20 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
+       <td>Edit</td>
+      
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'breakfast') { %>
      <tr>
-       <th><%= record.date %></th>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
        <th><%= record.portionUnit %></th>
        <th><%= record.calories %></th>
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
-       <th><%= record.protein %></th>  
+       <th><%= record.protein %></th> 
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
      </tr> 
       <% }%>
      <% }) %>
@@ -39,7 +41,6 @@
    <h3>Lunch</h3>
    <table> 
      <tr class="nutrition-column-names">
-       <td>Date</td>
        <td>Food Item</td>
        <td>Portion</td>
        <td>Unit</td>
@@ -47,18 +48,19 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
+       <td>Edit</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'lunch') { %>
      <tr>
-       <th><%= record.date %></th>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
        <th><%= record.portionUnit %></th>
        <th><%= record.calories %></th>
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
-       <th><%= record.protein %></th>  
+       <th><%= record.protein %></th> 
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th>  
      </tr> 
       <% }%>
      <% }) %>
@@ -67,7 +69,6 @@
    <h3>Dinner</h3>
    <table> 
      <tr class="nutrition-column-names">
-       <td>Date</td>
        <td>Food Item</td>
        <td>Portion</td>
        <td>Unit</td>
@@ -75,11 +76,11 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
+       <td>Edit</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'dinner') { %>
      <tr>
-       <th><%= record.date %></th>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
        <th><%= record.portionUnit %></th>
@@ -87,6 +88,7 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th>  
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
      </tr> 
       <% }%>
      <% }) %>
@@ -96,7 +98,6 @@
    <h3>Snacks</h3>
    <table> 
      <tr class="nutrition-column-names">
-       <td>Date</td>
        <td>Food Item</td>
        <td>Portion</td>
        <td>Unit</td>
@@ -104,18 +105,19 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
+       <td>Edit</td>
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType.toString() == 'snack') { %>
      <tr>
-       <th><%= record.date %></th>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
        <th><%= record.portionUnit %></th>
        <th><%= record.calories %></th>
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
-       <th><%= record.protein %></th>  
+       <th><%= record.protein %></th> 
+       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th>  
      </tr> 
       <% }%>
      <% }) %>

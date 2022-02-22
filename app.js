@@ -8,6 +8,7 @@ require("./db");
 const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
+const methodOverride = require('method-override')
 const session = require("express-session");
 const store = require("connect-mongo");
 const dotenv = require("dotenv");
@@ -20,6 +21,8 @@ app.use(expressLayouts);
 
 // middleware to extract the body from the request
 app.use(express.urlencoded({ extended: false }));
+// middle ware for using more http verbs in the html
+app.use(methodOverride('_method'))
 // hooking up the public folder
 app.use(express.static("public"));
 

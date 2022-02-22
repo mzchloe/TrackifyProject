@@ -1,12 +1,7 @@
+<h2>Update your food</h2>
+
 <div>
-    <form  action="/nutri/tracknutrition" method="post">
-        <span class="nutri-form">
-            <label  for="date">Date</label>
-            <input type="date" name="date" />
-        </span>
-        
-        <label  for="mealType">Meal</label>
-        <input type="text" name="mealType" placeholder="Type of meal"/>
+    <form  action="/nutri/update/<%= food.id %>?_method=PUT" method="post">
         <input type="text" name="foodType" placeholder="food"/>
         <input type="number" name="portion" placeholder="portion"/>
         <input type="text" name="portionUnit" placeholder="portion unit"/>
@@ -14,13 +9,6 @@
         <input type="number" name="carbs" placeholder="carbs"/>
         <input type="number" name="fat" placeholder="fat"/>
         <input type="number" name="protein" placeholder="protein"/>
-        <button type="submit">Add</button>
+        <button type="submit">Edit</button>
     </form>
 </div>
-
-<div>
-
-
-    
-</div>
-

@@ -235,3 +235,7 @@ td, th {
   height: 50px;
   font-size: small;
 }
+
+.nutri-form {
+  display: flex;
+}

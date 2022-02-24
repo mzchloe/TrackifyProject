@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const foodSchema = mongoose.Schema({
 	mealType: {
 	  type: String,
+	  required: true
 	},
 	date: {
 	  type: Date,

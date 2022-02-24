@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const User = require("../models/user.model");
+const FoodItem = require("../models/food.model");
 const { isLoggedIn } = require("../middlewares/guard");
 
 // SignUp route
@@ -45,7 +46,22 @@ router.post("/login", async (req, res) => {
 });
 
 //profile page
-router.get("/profile", isLoggedIn, (req, res) => {
+router.get("/profile", isLoggedIn, async (req, res) => {
+  const today = new Date(
+    new Date().getFullYear(),
+    new Date().getMonth(),
+    new Date().getDate()
+  );
+
+  const data = await FoodItem.find({
+    user: req.session.currentUser._id,
+    date: {
+      $gt: today,
+    },
+  });
+
+  console.log(data);
+
   res.render("profile");
 });
 

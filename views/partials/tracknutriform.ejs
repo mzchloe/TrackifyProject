@@ -4,9 +4,12 @@
             <label  for="date">Date</label>
             <input type="date" name="date" />
         </span>
-        
-        <label  for="mealType">Meal</label>
-        <input type="text" name="mealType" placeholder="Type of meal"/>
+        <select name="mealType" class="meal-input" >
+            <option value="breakfast">breakfast</option>
+            <option value="lunch">lunch</option>
+            <option value="dinner">dinner</option>
+            <option value="snack">snack</option>
+          </select>         
         <input type="text" name="foodType" placeholder="food"/>
         <input type="number" name="portion" placeholder="portion"/>
         <input type="text" name="portionUnit" placeholder="portion unit"/>
@@ -16,11 +19,5 @@
         <input type="number" name="protein" placeholder="protein"/>
         <button type="submit">Add</button>
     </form>
-</div>
-
-<div>
-
-
-    
 </div>
 

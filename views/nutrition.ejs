@@ -23,7 +23,7 @@
       
      </tr>
      <% data.forEach((record) => { %>
-      <% if (record.mealType.toString() == 'breakfast') { %>
+      <% if (record.mealType?.toString() == 'breakfast') { %>
      <tr>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
@@ -57,7 +57,7 @@
        <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
-      <% if (record.mealType.toString() == 'lunch') { %>
+      <% if (record.mealType?.toString() == 'lunch') { %>
      <tr>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
@@ -90,7 +90,7 @@
        <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
-      <% if (record.mealType.toString() == 'dinner') { %>
+      <% if (record.mealType?.toString() == 'dinner') { %>
      <tr>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>
@@ -124,7 +124,7 @@
        <td>Delete</td>
      </tr>
      <% data.forEach((record) => { %>
-      <% if (record.mealType.toString() == 'snack') { %>
+      <% if (record.mealType?.toString() == 'snack') { %>
      <tr>
        <th><%= record.foodType %></th>
        <th><%= record.portion %></th>

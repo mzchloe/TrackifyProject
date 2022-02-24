@@ -7,6 +7,10 @@ body {
   /* overflow:hidden; */
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 /* HEADLINES / Titles */
 h2 {
   color: #fbf6f0;
@@ -107,12 +111,12 @@ ul li button {
 .form input,
 select,
 text {
-  color: #fbf6f0;
+  color: grey;
   padding-left: 10px;
 }
 
 ::placeholder {
-  color: #fbf6f0;
+  color: #FFA45B;
   padding-left: 5px;
 }
 
@@ -212,6 +216,35 @@ text {
   width: 150px;
 }
 
+/* Tracking Form */
+/* .tracking-container {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+ */
+
+#meals {
+  width: 150px;
+}
+
+#food-item {
+  width: 150px;
+}
+
+#portion {
+  width: 80px;
+}
+
+#calories {
+  width: 80px;
+}
+
+.track-input-field {
+  font-style: italic;
+}
+
 /* Daily Nutrition Overview */
 table {
   border-collapse: collapse;
@@ -223,7 +256,7 @@ td, th {
   text-align: left;
   font-weight: normal;
 }
-
+ 
 /* BUTTONS */
 
 
@@ -239,3 +272,4 @@ td, th {
 .nutri-form {
   display: flex;
 }
+

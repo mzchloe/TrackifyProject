@@ -42,6 +42,7 @@ router.post("/login", async (req, res) => {
       res.render("login", {message});
     }
   } catch (error) {
+   // let message = 'No user found'
     res.redirect("/user/login");
   }
 });

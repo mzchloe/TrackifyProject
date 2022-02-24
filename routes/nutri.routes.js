@@ -58,7 +58,7 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
 
 router.get("/update/:id", async (req, res) => {
   const food = await FoodItem.findById(req.params.id);
-  console.log(food);
+  //console.log(food);
   res.render("update", { food });
 });
 

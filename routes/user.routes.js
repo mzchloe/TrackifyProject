@@ -19,8 +19,9 @@ router.post("/signup", async (req, res) => {
     await user.save();
     res.redirect("/user/login");
   } catch (error) {
-    console.log(error);
-    res.redirect("/user/signup");
+    //console.log(error);
+    let message = 'Incomplete registration, please try again'
+    res.render("signup", {message});
   }
 });
 

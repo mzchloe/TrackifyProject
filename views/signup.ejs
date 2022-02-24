@@ -1,4 +1,7 @@
 <div class="signup box">
+    <% if (message) { %>
+        <span><%= message %> </span>
+        <% } %>
     <h2>Create account</h2>
         <form action="/user/signup" method="post"> 
             <ul class="signup form">

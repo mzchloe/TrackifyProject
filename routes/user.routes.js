@@ -26,7 +26,7 @@ router.post("/signup", async (req, res) => {
 
 // shows the log in form
 router.get("/login", (req, res) => {
-  res.render("login");
+  res.render("login", { message: '' });
 });
 
 // handles the authentication of a user
@@ -38,7 +38,8 @@ router.post("/login", async (req, res) => {
       req.session.currentUser = user;
       res.redirect("/user/profile");
     } else {
-      res.redirect("/user/login");
+      let message = 'Incorrect password'
+      res.render("login", {message});
     }
   } catch (error) {
     res.redirect("/user/login");

@@ -12,6 +12,7 @@ const methodOverride = require('method-override')
 const session = require("express-session");
 const store = require("connect-mongo");
 const dotenv = require("dotenv");
+const isLoggedIn = require('./middlewares/guard')
 const app = express();
 
 // template engine setup
@@ -60,6 +61,11 @@ app.locals.title = `${capitalized(projectName)}- Ironhack Project 2 - Trackify`;
 // 👇 Start handling routes here
 const index = require("./routes/index");
 app.use("/", index);
+
+// app.get('/', isLoggedIn,async (req, res) => {
+//   const index = require("./routes/index");
+//   res.render(index);
+// })
 
 //User Route
 const userRouter = require("./routes/user.routes");

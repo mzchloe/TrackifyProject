@@ -1,4 +1,7 @@
 <div class="login box">
+    <% if (message) { %>
+        <span><%= message %> </span>
+        <% } %>
     <h2>account login</h2>
         <form action="/user/login" method="post"> 
             <ul class="login form">

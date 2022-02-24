@@ -13,7 +13,18 @@
     <p class="headline1">My Dashboard</p>
     <p class="headline2">My report</p>
     <div class="report row">
-      <div class="total-cal"></div>
+      <div /*class="total-cal"*/>
+        <% if (data) { %>
+          <span>Total Calories <%= data.totalCalories %> </span>
+          <br>
+          <span>Total Carbs <%= data.totalCarbs %> </span>
+          <br>
+          <span>Total Fat <%= data.totalFat %> </span>
+          <br>
+          <span>Total Protein <%= data.totalProtein %> </span>
+          <% } %>
+
+      </div>
       <button class="report-btn">View more</button>
     </div>
     <p class="headline2">Tracking</p>

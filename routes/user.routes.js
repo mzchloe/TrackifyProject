@@ -27,7 +27,7 @@ router.post("/signup", async (req, res) => {
 
 // shows the log in form
 router.get("/login", (req, res) => {
-  res.render("login", { message: '' });
+  res.render("login", { message: "" });
 });
 
 // handles the authentication of a user
@@ -39,12 +39,12 @@ router.post("/login", async (req, res) => {
       req.session.currentUser = user;
       res.redirect("/user/profile");
     } else {
-      let message = 'Incorrect password'
-      res.render("login", {message});
+      let message = "Incorrect password";
+      res.render("login", { message });
     }
   } catch (error) {
-   let message = 'No user found'
-    res.render("login", {message});
+    let message = "No user found";
+    res.render("login", { message });
   }
 });
 
@@ -56,18 +56,47 @@ router.get("/profile", isLoggedIn, async (req, res) => {
     new Date().getDate()
   );
 
-  const data = await FoodItem.find({
+  const rawData = await FoodItem.find({
     user: req.session.currentUser._id,
     date: {
       $gt: today,
     },
   });
 
-  console.log(data);
+  const totalCalories = [];
+  const totalCarbs = [];
+  const totalFat = [];
+  const totalProtein = [];
+  for (record of rawData) {
+    totalCalories.push(record.calories);
+    totalCarbs.push(record.carbs);
+    totalFat.push(record.fat);
+    totalProtein.push(record.protein);
+  }
 
-  res.render("profile");
+  const calSum = totalCalories.reduce((acc, value) => {
+    return acc + value;
+  });
+
+  const carbsSum = totalCarbs.reduce((acc, value) => {
+    return acc + value;
+  });
+  const fatSum = totalFat.reduce((acc, value) => {
+    return acc + value;
+  });
+  const proteinSum = totalProtein.reduce((acc, value) => {
+    return acc + value;
+  });
+
+  data = {
+    totalCalories: calSum,
+    totalCarbs: carbsSum,
+    totalFat: fatSum,
+    totalProtein: proteinSum,
+  };
+
+  res.render("profile", { data });
 });
-
 
 // route for logout
 router.get("/logout", (req, res) => {

@@ -42,7 +42,6 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
       new Date().getMonth(),
       new Date().getDate()
     );
-    //const today = new Date(oldDate.toDateString());
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
       date: {
@@ -58,7 +57,6 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
 
 router.get("/update/:id", async (req, res) => {
   const food = await FoodItem.findById(req.params.id);
-  //console.log(food);
   res.render("update", { food });
 });
 

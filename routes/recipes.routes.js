@@ -1,0 +1,28 @@
+const router = require("express").Router();
+const bcrypt = require("bcrypt");
+const FoodItem = require("../models/food.model");
+const { isLoggedIn } = require("../middlewares/guard");
+require("dotenv/config");
+const axios = require("axios").default;
+
+router.get("/recipes", isLoggedIn, async (req, res) => {
+    
+
+
+    res.render("recipes")
+})
+
+router.post("/recipes", isLoggedIn, async (req, res) => {
+    const { RecipeSearchClient } = require('edamam-api');
+    console.log(process.env.CLIENT_ID)
+    console.log(process.env.CLIENT_SECRET) 
+    const client = new RecipeSearchClient({
+     appId: `${process.env.CLIENT_ID}`,
+     appKey: `${process.env.CLIENT_SECRET}`
+}); 
+const searchInput = req.body.searchInput 
+    const results = await client.search({ query: {calories: searchInput } }); 
+    console.log(results)
+})
+
+module.exports = router; 

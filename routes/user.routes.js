@@ -63,6 +63,7 @@ router.get("/profile", isLoggedIn, async (req, res) => {
     },
   });
 
+  //shows the nutrition summary
   const totalCalories = [];
   const totalCarbs = [];
   const totalFat = [];
@@ -74,19 +75,22 @@ router.get("/profile", isLoggedIn, async (req, res) => {
     totalProtein.push(record.protein);
   }
 
+
   const calSum = totalCalories.reduce((acc, value) => {
     return acc + value;
-  });
+  }, 0); 
 
   const carbsSum = totalCarbs.reduce((acc, value) => {
     return acc + value;
-  });
+  }, 0);
+
   const fatSum = totalFat.reduce((acc, value) => {
     return acc + value;
-  });
+  }, 0);
+
   const proteinSum = totalProtein.reduce((acc, value) => {
-    return acc + value;
-  });
+  return acc + value;
+}, 0);
 
   data = {
     totalCalories: calSum,

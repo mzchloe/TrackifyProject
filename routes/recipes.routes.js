@@ -6,10 +6,8 @@ require("dotenv/config");
 const axios = require("axios").default;
 
 router.get("/recipes", isLoggedIn, async (req, res) => {
-    
-
-
-    res.render("recipes")
+    const data = '';
+    res.render("recipes", {data});
 })
 
 router.post("/recipes", isLoggedIn, async (req, res) => {
@@ -22,7 +20,10 @@ router.post("/recipes", isLoggedIn, async (req, res) => {
 }); 
 const searchInput = req.body.searchInput 
     const results = await client.search({ query: {calories: searchInput } }); 
-    console.log(results)
+    const data = results["hits"].slice(0,5);
+    // console.log(data)
+
+    res.render("recipes", {data});
 })
 
 module.exports = router; 

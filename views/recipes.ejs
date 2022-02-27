@@ -5,3 +5,16 @@ Max calories in the recipe
       Search
     </button>
 </form>
+
+<% if (data) { %>
+    <% data.forEach((record) => { %>
+      <ul>
+        <li><%=record.recipe.label%></li>
+        <img src="<%= record.recipe.image %>">
+        <a href="<%= record.recipe.url %>">See the recipe here</a>
+      </ul>
+    <% }) %>
+  <% } %>
+  
+
+  

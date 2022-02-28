@@ -5,7 +5,9 @@
   
     <%- include('./partials/tracknutriform'); %>
 
-    <div class="nutridata"><h2>Nutrition Diary <%= data[0]?.date.toLocaleDateString() %></h2>
+    <h2 id="nutri-diary-h2">Nutrition Diary <%= data[0]?.date.toLocaleDateString() %></h2>
+    
+    <div class="nutridata">
    
    <h3>Breakfast</h3>
    <table class="diary breakfast"> 

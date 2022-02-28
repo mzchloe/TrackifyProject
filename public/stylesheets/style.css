@@ -14,7 +14,9 @@ body {
   box-sizing: border-box;
 }
 
-
+#nutri-diary-h2 {
+  margin-left: 10px;
+}
 section {
   margin-top: 100px;
   height: 200px;
@@ -322,7 +324,7 @@ table {
 
 td,
 th {
-  border: 1px solid #fbf6f0;
+  /* border: 1px solid #fbf6f0; */
   padding: 0.5rem;
   text-align: left;
   font-weight: normal;
@@ -342,7 +344,6 @@ th {
  justify-content: space-evenly;
  margin: 10px;
  height: 100px;
- color: white;
  border: none;
  border-radius: 0.8em;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -367,11 +368,14 @@ th {
 
 /* Nutrition Diary Overview */
 .nutridata {
-  background-color: #fbf6f0;
+  background-color: white;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 10px;
+  border: none;
+ border-radius: 0.8em;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nutridata h2 {
@@ -412,7 +416,8 @@ th {
   font-size: 0.8em;
   font-weight: bold;
   width: 100px;   
-  background-color: #AEE6E6;
+  background-color: black;
+  color: white;
 }
 
 /* Footer */

@@ -58,14 +58,15 @@ const capitalized = (string) =>
 
 app.locals.title = `${capitalized(projectName)}- Ironhack Project 2 - Trackify`;
 
+// middle ware for making the user available to all templates
+app.use((req, res, next) => {
+  res.locals.currentUser = req.session.currentUser;
+  next();
+});
+
 // 👇 Start handling routes here
 const index = require("./routes/index");
 app.use("/", index);
-
-// app.get('/', isLoggedIn,async (req, res) => {
-//   const index = require("./routes/index");
-//   res.render(index);
-// })
 
 //User Route
 const userRouter = require("./routes/user.routes");

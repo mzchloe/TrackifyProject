@@ -98,7 +98,6 @@ router.get("/profile", isLoggedIn, async (req, res) => {
     totalFat: fatSum,
     totalProtein: proteinSum,
   };
-
   res.render("profile", { data });
 });
 

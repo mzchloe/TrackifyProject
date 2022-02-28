@@ -6,7 +6,7 @@ const { isLoggedIn } = require("../middlewares/guard");
 
 // SignUp route
 router.get("/signup", (req, res) => {
-  res.render("signup");
+  res.render("signup", { message: "" });
 });
 
 // handles the creation of a user
@@ -20,8 +20,8 @@ router.post("/signup", async (req, res) => {
     res.redirect("/user/login");
   } catch (error) {
     //console.log(error);
-    let message = 'Incomplete registration, please try again'
-    res.render("signup", {message});
+    let message = 'Incomplete registration, please try again';
+    res.render("signup", { message });
   }
 });
 

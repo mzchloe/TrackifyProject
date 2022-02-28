@@ -10,30 +10,34 @@
     <button class="crud-btns">Change password</button>
   </div>
   <div class="user-dashboard">
-    <h1>My Dashboard</h1>
-    <h2>My Daily Nutrition Report</h2>
+    <h2>My Dashboard</h2>
+    <h3>My Daily Nutrition Report</h3>
     <div class="report row">
-      <div /*class="total-cal"*/>
         <% if (data) { %>
-          <span>Total Calories <%= data.totalCalories %> </span>
+          <div class="summary-box calories-box"><%= data.totalCalories %>
+          <br><span class="name-tags">Total Calories</span></div>
+          <div class="summary-box"><%= data.totalCarbs %>
+          <br><span class="name-tags">Total Carbs</span></div>
+          <div class="summary-box"> <%= data.totalFat %>
+          <br><span class="name-tags">Total Fat</span></div>
+          <div class="summary-box"><%= data.totalProtein %>
+          <br><span class="name-tags">Total Protein</span></div>
+          <!-- <span>Total Calories <%= data.totalCalories %> </span> -->
           <br>
-          <span>Total Carbs <%= data.totalCarbs %> </span>
+          <!-- <span>Total Carbs <%= data.totalCarbs %> </span> -->
           <br>
-          <span>Total Fat <%= data.totalFat %> </span>
+          <!-- <span>Total Fat <%= data.totalFat %> </span> -->
           <br>
-          <span>Total Protein <%= data.totalProtein %> </span>
+          <!-- <span>Total Protein <%= data.totalProtein %> </span> -->
           <% } %>
-
-      </div>
-      <!-- <button class="report-btn">View more</button> -->
     </div>
-    <h2>Tracking</h2>
+    <h3>Tracking</h3>
     <div class="tracking row">
       <button class="track-btn"><a href="/nutri/tracknutrition" class="profilelinks">Nutrition</a></button>
       <button class="track-btn">Activity</button>
       <button class="track-btn">Sleep</button>
     </div>
-    <h2>Recommendations</h2>
+    <h3>Recommendations</h3>
     <div class="recommendation row">
       <button class="recommendation-btn"><a href="/recipes/recipes" class="recipelinks">Recipes</a></button>
       <button class="recommendation-btn">Activity</button>

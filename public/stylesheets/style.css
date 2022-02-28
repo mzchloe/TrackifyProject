@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding-top: 60px;
   height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: black;
@@ -149,7 +149,7 @@ text {
 /* PROFILE PAGE  */
 .profile-page {
   /* border: 2px solid black; */
-  border-radius: 0.8em;
+  border-radius: 2em;
   display: flex;
   flex-direction: row;
   height: 80vh;
@@ -161,9 +161,9 @@ text {
 .user-info {
   /* border: 1px solid green; */
   background-color: white;
-  border-radius: 0.8em;
+  border-radius: 2em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 20px;
+  margin: 15px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -186,29 +186,30 @@ text {
 }
 /* >>Dashboard */
 .user-dashboard {
-  /* border: 1px solid green; */
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 1px;
   margin-right: 20px;
+  margin-left: 20px;
   margin-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
   width: 90%;
 }
 
-.user-dashboard h1, h2 {
+.user-dashboard h2, h3 {
   margin-left: 10px;
 }
 
-.row {
-  /* border: 1px solid blue; */
-  width: auto;
-  height: auto;
-  margin: 10px;
-}
-
 .report {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid red;
+}
+/* .report {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -217,8 +218,34 @@ text {
   background-color: white;
   border-radius: 0.8em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+.row {
+  border: 1px solid black;
+  margin: -10px;
+} 
+
+.summary-box {
+  margin: 10px;
+  padding-top: 30px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  background-color: #FFA45B;
+  font-size: 2em;
+  color: white;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.name-tags {
+  font-size: 0.5em;
+}
+
+.calories-box {
+  width: 250px;
+}
 .total-cal {
   background-color: white;
   height: 50px;
@@ -235,7 +262,7 @@ text {
 .tracking {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   
 }
 
@@ -253,7 +280,7 @@ text {
 .recommendation {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .recommendation-btn {

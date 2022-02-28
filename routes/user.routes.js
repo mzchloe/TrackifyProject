@@ -39,7 +39,7 @@ router.post("/login", async (req, res) => {
       req.session.currentUser = user;
       res.redirect("/");
     } else {
-      let message = "Incorrect password";
+      let message = "Incorrect password, try again";
       res.render("login", { message });
     }
   } catch (error) {

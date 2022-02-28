@@ -5,11 +5,10 @@
   
     <%- include('./partials/tracknutriform'); %>
 
-    <h2>Nutrition Diary</h2>
-    <p><%= data[0]?.date.toLocaleDateString() %></p>
-
+    <div class="nutridata"><h2>Nutrition Diary <%= data[0]?.date.toLocaleDateString() %></h2>
+   
    <h3>Breakfast</h3>
-   <table> 
+   <table class="diary breakfast"> 
      <tr class="nutrition-column-names">
        <td>Food Item</td>
        <td>Portion</td>
@@ -18,8 +17,8 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <td>Edit</td>
-       <td>Delete</td>
+       <!-- <td>Edit</td>
+       <td>Delete</td> -->
       
      </tr>
      <% data.forEach((record) => { %>
@@ -33,9 +32,9 @@
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
        <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
-       <th>
+       <th> 
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
-          <button type="submit">delete</button>
+          <button type="submit">Delete</button>
        </th> 
      </tr> 
       <% }%>
@@ -44,7 +43,7 @@
 
 
    <h3>Lunch</h3>
-   <table> 
+   <table class="diary lunch"> 
      <tr class="nutrition-column-names">
        <td>Food Item</td>
        <td>Portion</td>
@@ -53,8 +52,8 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <td>Edit</td>
-       <td>Delete</td>
+       <!-- <td>Edit</td>
+       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'lunch') { %>
@@ -86,8 +85,8 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <td>Edit</td>
-       <td>Delete</td>
+   <!--     <td>Edit</td>
+       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'dinner') { %>
@@ -120,8 +119,8 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <td>Edit</td>
-       <td>Delete</td>
+  <!--      <td>Edit</td>
+       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'snack') { %>
@@ -142,7 +141,7 @@
       <% }%>
      <% }) %>
    </table>
-
+  </div>
 
     <footer>
       <%- include('./partials/footer'); %>

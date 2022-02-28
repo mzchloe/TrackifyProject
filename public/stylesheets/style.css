@@ -41,7 +41,18 @@ section {
   margin-left: 10px;
 }
 
-
+.error {
+  margin-left: 500px;
+  width: 200px;
+  height: 30px;
+  background: rgb(243, 189, 189, 0.8);
+  border: 1px solid red;
+  color: red;
+  font-size: 0.8em;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 0.3em;
+}
 
 /* LINKS */
 a {
@@ -186,7 +197,7 @@ text {
 }
 /* >>Dashboard */
 .user-dashboard {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   margin-top: 1px;
@@ -199,29 +210,20 @@ text {
   width: 90%;
 }
 
-.user-dashboard h2, h3 {
+.user-dashboard h2, h3, p {
   margin-left: 10px;
+  color: black;
 }
 
 .report {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
-/* .report {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 0.8em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
 
 .row {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: -10px;
 } 
 
@@ -246,24 +248,12 @@ text {
 .calories-box {
   width: 250px;
 }
-.total-cal {
-  background-color: white;
-  height: 50px;
-  width: 50px;
-  margin-left: 50px;
-}
 
-.report-btn {
-  margin-top: 30px;
-  align-self: flex-end;
-  height: 20px;
-}
 
 .tracking {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
 }
 
 .track-btn {
@@ -295,31 +285,32 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Tracking Form */
-/* .tracking-container {
-  border: 1px solid black;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-}
- */
 
 #meals {
-  width: 150px;
+  width: 100px;
 }
 
 #food-item {
-  width: 150px;
+  width: 100px;
 }
 
-#portion {
+#portion, #size, #calories, #protein {
   width: 80px;
 }
 
-#calories {
-  width: 80px;
+#carbs, #fat {
+  width: 60px;  
 }
 
+#date {
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+
+#meal {
+  padding-left: 10px;
+  font-size: 0.8em;
+}
 .track-input-field {
   font-style: italic;
 }
@@ -337,6 +328,75 @@ th {
   font-weight: normal;
 }
 
+/* Nutrition Diary Page  */
+.nutri-tracking-container {
+ /* background-color: #ffa45b; */
+ background-image: url("https://images.unsplash.com/photo-1604908815567-c9727d53f92a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: space-evenly;
+ margin: 10px;
+ height: 100px;
+ color: white;
+ border: none;
+ border-radius: 0.8em;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nutri-form {
+  display: flex;
+  padding: 10px;
+  margin: 2px;
+  /* border: 1px solid black; */
+} 
+
+.nutri-form input, select, button {
+  border: none;
+  margin-left: 5px;
+  font-size: 1em;
+  height: 30px;
+  padding-right: 10px;
+  border-radius: 0.3em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Nutrition Diary Overview */
+.nutridata {
+  background-color: #fbf6f0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.nutridata h2 {
+  margin-left: 10px;
+}
+
+.nutrition-column-names, td{
+  font-size: 0.8em;
+  font-weight:900;
+}
+
+.nutrition-column-names, tr{
+  font-size: 0.8em;
+}
+
+.nutrition-column-names, th{
+  font-size: 0.9em;
+  width: 50px;
+  /* border: 1px solid black; */
+}
+
+.nutrition-column-names, h3{
+  font-size: 1em;
+  font-weight:900;
+}
 /* BUTTONS */
 .crud-btns {
   background-color: white;
@@ -348,6 +408,13 @@ th {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+#add {
+  font-size: 0.8em;
+  font-weight: bold;
+  width: 100px;   
+  background-color: #AEE6E6;
+}
+
 /* Footer */
 .footer {
   position: fixed;
@@ -357,6 +424,18 @@ th {
   font-size: small;
 }
 
-.nutri-form {
-  display: flex;
+
+
+
+
+.nutri-tracking-container, form input {
+  font-size:1em;
 }
+/* 
+.diary {
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */

@@ -46,7 +46,7 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
       date: {
-        $gt: today,
+        $gte: today,
       },
     });
 

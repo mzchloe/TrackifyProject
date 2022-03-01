@@ -16,7 +16,7 @@ router.get("/tracknutrition", async (req, res) => {
   const data = await FoodItem.find({
     user: req.session.currentUser._id,
     date: {
-      $gt: today,
+      $gte: today,
     },
   });
   res.render("nutrition", { data });
@@ -56,12 +56,14 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
   }
 });
 
+//show the edit form
 router.get("/update/:id", async (req, res) => {
   const food = await FoodItem.findById(req.params.id);
   //console.log(food);
   res.render("update", { food });
 });
 
+//updating the changes 
 router.put("/update/:id", async (req, res) => {
   req.foodItem = await FoodItem.findById(req.params.id);
   req.foodItem.foodType = req.body.foodType;
@@ -83,7 +85,7 @@ router.put("/update/:id", async (req, res) => {
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
       date: {
-        $gt: today,
+        $gte: today,
       },
     });
     res.render("nutrition", { data });

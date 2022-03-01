@@ -33,6 +33,7 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
+       <!-- Change edit button  -->
        <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
        <th> 
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">

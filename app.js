@@ -1,7 +1,3 @@
-// // ℹ️ Gets access to environment variables/settings
-// require('dotenv/config');
-
-// Handles http requests (express is node js framework)
 const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
@@ -12,11 +8,11 @@ const dotenv = require("dotenv");
 const isLoggedIn = require('./middlewares/guard')
 const app = express();
 
-
 //connects to the environment .env
 dotenv.config()
 
 mongoose.connect(process.env.MONGODB_URL);
+
 // template engine setup
 app.set("view engine", "ejs");
 // ejs layout setup
@@ -47,14 +43,6 @@ app.use(
   })
 );
 
-// middle ware for making the user available to all templates
-app.use((req, res, next) => {
-  res.locals.currentUser = req.session.currentUser;
-  next();
-});
-
-// // ℹ️ This function is getting exported from the config folder. It runs most middlewares
-// // require('./config')(app);
 
 // default value for title local
 const projectName = "project-trackify";

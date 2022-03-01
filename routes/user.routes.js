@@ -57,7 +57,7 @@ router.get("/profile", isLoggedIn, async (req, res) => {
   );
 
   const rawData = await FoodItem.find({
-    user: req.session.currentUser._id,
+    // user: req.session.currentUser._id,
     date: {
       $gt: today,
     },

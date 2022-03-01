@@ -1,9 +1,6 @@
 // // ℹ️ Gets access to environment variables/settings
 // require('dotenv/config');
 
-// // ℹ️ Connects to the database
-require("./db");
-
 // Handles http requests (express is node js framework)
 const express = require("express");
 const mongoose = require("mongoose");
@@ -15,6 +12,11 @@ const dotenv = require("dotenv");
 const isLoggedIn = require('./middlewares/guard')
 const app = express();
 
+
+//connects to the environment .env
+dotenv.config()
+
+mongoose.connect(process.env.MONGODB_URL);
 // template engine setup
 app.set("view engine", "ejs");
 // ejs layout setup
@@ -27,9 +29,12 @@ app.use(methodOverride('_method'))
 // hooking up the public folder
 app.use(express.static("public"));
 
+//required for the app when deployed to Heroku (in production)
+app.set("trust proxy", 1);
+
 app.use(
   session({
-    secret: "helloworld",
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: false,
     cookie: {
@@ -37,7 +42,7 @@ app.use(
       maxAge: 1200000,
     },
     store: store.create({
-      mongoUrl: "mongodb://localhost/trackify-project",
+      mongoUrl: process.env.MONGODB_URL,
     }),
   })
 );

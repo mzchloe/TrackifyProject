@@ -43,7 +43,6 @@ app.use(
   })
 );
 
-
 // default value for title local
 const projectName = "project-trackify";
 const capitalized = (string) =>

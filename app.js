@@ -49,7 +49,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 👇 Start handling routes here
+// Start handling routes
 const index = require("./routes/index");
 app.use("/", index);
 
@@ -65,7 +65,7 @@ app.use("/nutri", nutriRoute);
 const recipesRoute = require("./routes/recipes.routes")
 app.use("/recipes", recipesRoute);
 
-// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
+// To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
 module.exports = app;

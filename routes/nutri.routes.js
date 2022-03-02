@@ -6,7 +6,6 @@ const { redirect } = require("express/lib/response");
 
 //Route to display nutrition page
 router.get("/tracknutrition", async (req, res) => {
-  //const date = new Date()
   const today = new Date(
     new Date().getFullYear(),
     new Date().getMonth(),
@@ -42,7 +41,7 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
       new Date().getMonth(),
       new Date().getDate()
     );
-    //const today = new Date(oldDate.toDateString());
+
     const data = await FoodItem.find({
       user: req.session.currentUser._id,
       date: {
@@ -59,7 +58,6 @@ router.post("/tracknutrition", isLoggedIn, async (req, res) => {
 //show the edit form
 router.get("/update/:id", async (req, res) => {
   const food = await FoodItem.findById(req.params.id);
-  //console.log(food);
   res.render("update", { food });
 });
 

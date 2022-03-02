@@ -12,8 +12,6 @@ router.get("/recipes", isLoggedIn, async (req, res) => {
 
 router.post("/recipes", isLoggedIn, async (req, res) => {
     const { RecipeSearchClient } = require('edamam-api');
-    console.log(process.env.CLIENT_ID)
-    console.log(process.env.CLIENT_SECRET) 
     const client = new RecipeSearchClient({
      appId: `${process.env.CLIENT_ID}`,
      appKey: `${process.env.CLIENT_SECRET}`
@@ -21,7 +19,6 @@ router.post("/recipes", isLoggedIn, async (req, res) => {
 const searchInput = req.body.searchInput 
     const results = await client.search({ query: {calories: searchInput } }); 
     const data = results["hits"].slice(0,5);
-    // console.log(data)
 
     res.render("recipes", {data});
 })

@@ -27,7 +27,8 @@ router.post("/signup", async (req, res) => {
 
 // shows the log in form
 router.get("/login", (req, res) => {
-  res.render("login", { message: "" });
+  const message = ""
+  res.render("login", { message });
 });
 
 // handles the authentication of a user
@@ -37,7 +38,7 @@ router.post("/login", async (req, res) => {
     const isPwCorrect = await bcrypt.compare(req.body.password, user.password);
     if (isPwCorrect) {
       req.session.currentUser = user;
-      res.redirect("/");
+      res.redirect("/user/profile");
     } else {
       let message = "Incorrect password, try again";
       res.render("login", { message });
@@ -57,7 +58,7 @@ router.get("/profile", isLoggedIn, async (req, res) => {
   );
 
   const rawData = await FoodItem.find({
-    user: req.session.currentUser._id,
+    user: req.session.currentUser,
     date: {
       $gte: today,
     },

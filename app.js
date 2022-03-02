@@ -43,13 +43,6 @@ app.use(
   })
 );
 
-// default value for title local
-const projectName = "project-trackify";
-const capitalized = (string) =>
-  string[0].toUpperCase() + string.slice(1).toLowerCase();
-
-app.locals.title = `${capitalized(projectName)}- Ironhack Project 2 - Trackify`;
-
 // middle ware for making the user available to all templates
 app.use((req, res, next) => {
   res.locals.currentUser = req.session.currentUser;

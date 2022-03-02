@@ -19,9 +19,6 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <!-- <td>Edit</td>
-       <td>Delete</td> -->
-      
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'breakfast') { %>
@@ -33,7 +30,7 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th><button><a href="/nutri/update/<%= record.id %> ">Edit</a></button></th> 
        <th> 
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
           <button type="submit">Delete</button>
@@ -54,8 +51,6 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-       <!-- <td>Edit</td>
-       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'lunch') { %>
@@ -67,10 +62,10 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th><button><a href="/nutri/update/<%= record.id %> ">Edit</a></button></th> 
        <th>
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
-          <button type="submit">delete</button>
+          <button type="submit">Delete</button>
        </th> 
      </tr> 
       <% }%>
@@ -87,8 +82,6 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-   <!--     <td>Edit</td>
-       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'dinner') { %>
@@ -100,10 +93,10 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th>  
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th><button><a href="/nutri/update/<%= record.id %> ">Edit</a></button></th> 
        <th>
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
-          <button type="submit">delete</button>
+          <button type="submit">Delete</button>
        </th> 
      </tr> 
       <% }%>
@@ -121,8 +114,6 @@
        <td>Carbs</td>
        <td>Fat</td>
        <td>Protein</td>
-  <!--      <td>Edit</td>
-       <td>Delete</td> -->
      </tr>
      <% data.forEach((record) => { %>
       <% if (record.mealType?.toString() == 'snack') { %>
@@ -134,10 +125,10 @@
        <th><%= record.carbs %></th>
        <th><%= record.fat %></th>
        <th><%= record.protein %></th> 
-       <th><a href="/nutri/update/<%= record.id %> ">Edit</a></th> 
+       <th><button><a href="/nutri/update/<%= record.id %> ">Edit</a></button></th> 
        <th>
         <form action="/nutri/delete/<%= record.id %>?_method=DELETE" method="post">
-          <button type="submit">delete</button>
+          <button type="submit">Delete</button>
        </th>  
      </tr> 
       <% }%>

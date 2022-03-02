@@ -14,9 +14,10 @@ body {
   box-sizing: border-box;
 }
 
-#nutri-diary-h2 {
+#nutri-diary-h2 { 
   margin-left: 10px;
 }
+
 section {
   margin-top: 100px;
   height: 200px;
@@ -318,6 +319,8 @@ text {
 }
 
 /* Daily Nutrition Overview */
+
+
 table {
   border-collapse: collapse;
 }
@@ -366,29 +369,58 @@ th {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.edit-btn {
+  background-color: #ffa45b;
+  width: 50px;
+}
+
+.del-btn {
+  border: 2px solid #ffa45b;
+  background-color: white;
+  width: 50px;  
+}
+
 /* Nutrition Diary Overview */
 .nutridata {
+ background-color: white;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ margin: 10px;
+ border: none;
+ border-radius: 0.8em;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.breakfast-box, .lunch-box, .dinner-box, .snacks-box{
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 10px;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ margin: 10px;
+  border: 1px solid green;
   border: none;
  border-radius: 0.8em;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .nutridata h2 {
   margin-left: 10px;
 }
 
+/* .nutrition-column-names {
+  border-bottom: 1px solid black;
+} */
 .nutrition-column-names, td{
   font-size: 0.8em;
   font-weight:900;
+  text-decoration: underline;
 }
 
 .nutrition-column-names, tr{
   font-size: 0.8em;
+  line-height: 0.5;
 }
 
 .nutrition-column-names, th{
@@ -401,6 +433,11 @@ th {
   font-size: 1em;
   font-weight:900;
 }
+
+
+/* .diary {
+  border: 1px solid black;
+} */
 /* BUTTONS */
 .crud-btns {
   background-color: white;
@@ -428,7 +465,6 @@ th {
   height: 50px;
   font-size: small;
 }
-
 
 
 

@@ -93,6 +93,7 @@ router.put("/update/:id", async (req, res) => {
   }
 });
 
+//delete food entry
 router.delete('/delete/:id', async (req, res) => {
   await FoodItem.findByIdAndDelete(req.params.id)
   res.redirect('/nutri/tracknutrition')

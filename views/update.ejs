@@ -1,14 +1,13 @@
-<h2>Update your food</h2>
-
-<div>
-    <form  action="/nutri/update/<%= food.id %>?_method=PUT" method="post">
-        <input type="text" name="foodType" placeholder="food"/>
-        <input type="number" name="portion" placeholder="portion"/>
-        <input type="text" name="portionUnit" placeholder="portion unit"/>
-        <input type="number" name="calories" placeholder="calories"/>
-        <input type="number" name="carbs" placeholder="carbs"/>
-        <input type="number" name="fat" placeholder="fat"/>
-        <input type="number" name="protein" placeholder="protein"/>
-        <button type="submit">Edit</button>
+<h2 id="update-food">Update your food</h2>
+<div class="edit-food-form">
+    <form class="edit-form" action="/nutri/update/<%= food.id %>?_method=PUT" method="post">
+        <input type="text" name="foodType" placeholder="Food/drink item" id="edit-food-item"/>
+        <input type="number" name="portion" placeholder="portion" id="edit-portion"/>
+        <input type="text" name="portionUnit" placeholder="portion unit" id="edit-unit"/>
+        <input type="number" name="calories" placeholder="calories" id="edit-calories"/>
+        <input type="number" name="carbs" placeholder="carbs" id="carbs"/>
+        <input type="number" name="fat" placeholder="fat" id="edit-fat"/>
+        <input type="number" name="protein" placeholder="protein" id="edit-protein"/>
+        <button type="submit" class="add-btn">SUBMIT</button>
     </form>
 </div>

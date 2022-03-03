@@ -421,45 +421,7 @@ h3 {
   border: 1px solid black;
 } */
 
-/* BUTTONS */
 
-/* BUTTONS > Profile section */
-.crud-btns {
-  background-color: white;
-  color: #ffa45b;
-  border: 1px solid #ffa45b;
-  border-radius: 0.8em;
-  height: 1.8em;
-  margin-bottom: 10px;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-/* BUTTONS > Food entry from  */
-#add-btn {
-  font-size: 0.8em;
-  font-weight: bold;
-  width: 100px;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
-/* BUTTONS > Nutrition Diary  */
-.edit-btn {
-  background-color: #ffa45b;
-  width: 60px;
-  cursor: pointer;
-  color: white;
-  text-transform: uppercase;
-}
-
-.del-btn {
-  border: 2px solid #ffa45b;
-  background-color: white;
-  width: 60px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
 
 /* RECIPES PAGE */
 
@@ -485,7 +447,7 @@ h3 {
     display: flex;
     padding: 10px;
     margin: 2px;
-    border: 1px solid black; 
+    /* border: 1px solid black;  */
 }
 
 .recipes-search-form input,
@@ -500,6 +462,60 @@ button {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+.recipes-search-form input{
+  background-image: url("../images/searchicon.png");
+  background-position: 8px 6px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  width: 500px;
+}
+
+::placeholder {
+  color: grey;
+}
+
+/* BUTTONS */
+
+/* BUTTONS > Profile section */
+.crud-btns {
+  background-color: white;
+  color: #ffa45b;
+  border: 1px solid #ffa45b;
+  border-radius: 0.8em;
+  height: 1.8em;
+  margin-bottom: 10px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* BUTTONS > Food entry & Recipes Search form  */
+#add-btn, #search-btn {
+  font-size: 0.8em;
+  font-weight: bold;
+  width: 100px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* BUTTONS > Nutrition Diary  */
+.edit-btn {
+  background-color: #ffa45b;
+  width: 60px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+}
+
+.del-btn {
+  border: 2px solid #ffa45b;
+  background-color: white;
+  width: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* BUTTONS > Recipes Search Form */
 
 
 /* FOOTER */

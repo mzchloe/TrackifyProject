@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-#nutri-diary-h2 { 
+#nutri-diary-h2 {
   margin-left: 10px;
 }
 
@@ -24,7 +24,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center 
+  justify-content: center;
 }
 
 /* Top nav logo */
@@ -90,7 +90,7 @@ nav ul {
   align-items: flex-end;
 }
 
-/* FORMS */
+/* SIGNUP & LOGIN FORMS */
 ul li {
   list-style-type: none;
   margin-left: -40px;
@@ -168,7 +168,7 @@ text {
   flex-direction: row;
   height: 80vh;
   justify-content: space-around;
-  background-color: #FBF6F0;
+  background-color: #fbf6f0;
 }
 
 /* >>User info */
@@ -194,10 +194,12 @@ text {
   width: 100%;
 }
 
-.profile, img {
+.profile,
+img {
   max-width: 150px;
   max-height: 150px;
 }
+
 /* >>Dashboard */
 .user-dashboard {
   /* border: 1px solid green; */
@@ -213,7 +215,9 @@ text {
   width: 90%;
 }
 
-.user-dashboard h2, h3, p {
+.user-dashboard h2,
+h3,
+p {
   margin-left: 10px;
   color: black;
 }
@@ -228,7 +232,7 @@ text {
 .row {
   /* border: 1px solid black; */
   margin: -10px;
-} 
+}
 
 .summary-box {
   margin: 10px;
@@ -236,7 +240,7 @@ text {
   height: 150px;
   width: 150px;
   text-align: center;
-  background-color: #FFA45B;
+  background-color: #ffa45b;
   font-size: 2em;
   color: white;
   border: none;
@@ -252,7 +256,6 @@ text {
   width: 250px;
 }
 
-
 .tracking {
   display: flex;
   flex-direction: row;
@@ -264,7 +267,7 @@ text {
   margin: 10px;
   height: 50px;
   width: 200px;
-  background-color: #FFDA77;
+  background-color: #ffda77;
   border: none;
   border-radius: 0.8em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -282,27 +285,70 @@ text {
   height: 50px;
   width: 200px;
   color: white;
-  background-color: #AEE6E6;
+  background-color: #aee6e6;
   border: none;
   border-radius: 0.8em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Food entry form  */
+.nutri-tracking-container {
+  /* background-color: #ffa45b; */
+  background-image: url("https://images.unsplash.com/photo-1604908815567-c9727d53f92a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  height: 100px;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.nutri-form {
+  display: flex;
+  padding: 10px;
+  margin: 2px;
+  /* border: 1px solid black; */
+}
+
+.nutri-form input,
+select,
+button {
+  border: none;
+  margin-left: 5px;
+  font-size: 1em;
+  height: 30px;
+  padding-right: 10px;
+  border-radius: 0.3em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* FOOD ENTRY FORM > input fields  */
 #meals {
   width: 100px;
 }
 
 #food-item {
-  width: 100px;
+  width: 150px;
 }
 
-#portion, #size, #calories, #protein {
+#portion,
+#size,
+#calories,
+#protein {
   width: 80px;
 }
 
-#carbs, #fat {
-  width: 60px;  
+#carbs,
+#fat {
+  width: 60px;
 }
 
 #date {
@@ -314,13 +360,8 @@ text {
   padding-left: 10px;
   font-size: 0.8em;
 }
-.track-input-field {
-  font-style: italic;
-}
 
-/* Daily Nutrition Overview */
-
-
+/* DAILY NUTRITION OVERVIEW  */
 table {
   border-collapse: collapse;
 }
@@ -333,137 +374,135 @@ th {
   font-weight: normal;
 }
 
-/* Nutrition Diary Page  */
-.nutri-tracking-container {
- /* background-color: #ffa45b; */
- background-image: url("https://images.unsplash.com/photo-1604908815567-c9727d53f92a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- align-items: center;
- justify-content: space-evenly;
- margin: 10px;
- height: 100px;
- border: none;
- border-radius: 0.8em;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+/* DAILY NUTRITION OVERVIEW > Meal sections */
 
-.nutri-form {
+.breakfast-box,
+.lunch-box,
+.dinner-box,
+.snacks-box {
+  background-color: white;
   display: flex;
-  padding: 10px;
-  margin: 2px;
-  /* border: 1px solid black; */
-} 
-
-.nutri-form input, select, button {
-  border: none;
-  margin-left: 5px;
-  font-size: 1em;
-  height: 30px;
-  padding-right: 10px;
-  border-radius: 0.3em;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.edit-btn {
-  background-color: #ffa45b;
-  width: 50px;
-  cursor: pointer;
-  color: white; 
-  text-transform: uppercase;
-}
-
-.del-btn {
-  border: 2px solid #ffa45b;
-  background-color: white;
-  width: 50px;  
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-/* Nutrition Diary Overview */
-.nutridata {
- background-color: white;
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
- margin: 10px;
- border: none;
- border-radius: 0.8em;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.breakfast-box, .lunch-box, .dinner-box, .snacks-box{
-  background-color: white;
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
- margin: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
   border: 1px solid green;
   border: none;
- border-radius: 0.8em;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.nutridata h2 {
-  margin-left: 10px;
-}
-
-/* .nutrition-column-names {
-  border-bottom: 1px solid black;
-} */
-.nutrition-column-names, td{
+.nutrition-column-names,
+td {
   font-size: 0.8em;
-  font-weight:900;
+  font-weight: 900;
   text-decoration: underline;
 }
 
-.nutrition-column-names, tr{
+.nutrition-column-names,
+tr {
   font-size: 0.8em;
   line-height: 0.5;
 }
 
-.nutrition-column-names, th{
+.nutrition-column-names,
+th {
   font-size: 0.9em;
   width: 50px;
   /* border: 1px solid black; */
 }
 
-.nutrition-column-names, h3{
+.nutrition-column-names,
+h3 {
   font-size: 1em;
-  font-weight:900;
+  font-weight: 900;
 }
-
 
 /* .diary {
   border: 1px solid black;
 } */
+
 /* BUTTONS */
+
+/* BUTTONS > Profile section */
 .crud-btns {
   background-color: white;
-  color: #FFA45B;
-  border: 1px solid #FFA45B;
+  color: #ffa45b;
+  border: 1px solid #ffa45b;
   border-radius: 0.8em;
   height: 1.8em;
   margin-bottom: 10px;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/* BUTTONS > Food entry from  */
 #add-btn {
   font-size: 0.8em;
   font-weight: bold;
-  width: 100px;   
+  width: 100px;
   background-color: black;
   color: white;
   cursor: pointer;
 }
 
-/* Footer */
+/* BUTTONS > Nutrition Diary  */
+.edit-btn {
+  background-color: #ffa45b;
+  width: 60px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+}
+
+.del-btn {
+  border: 2px solid #ffa45b;
+  background-color: white;
+  width: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* RECIPES PAGE */
+
+/* RECIPES PAGE > Form  */
+.search-recipes-container {
+  background-image: url("https://images.unsplash.com/photo-1604908815567-c9727d53f92a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background-size: cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  height: 100px;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.recipes-search-form {
+    display: flex;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid black; 
+}
+
+.recipes-search-form input,
+select,
+button {
+  border: none;
+  margin-left: 5px;
+  font-size: 1em;
+  height: 30px;
+  padding-right: 10px;
+  border-radius: 0.3em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+/* FOOTER */
 .footer {
   position: fixed;
   bottom: 0;
@@ -471,18 +510,3 @@ th {
   height: 50px;
   font-size: small;
 }
-
-
-
-
-.nutri-tracking-container, form input {
-  font-size:1em;
-}
-/* 
-.diary {
-  color: black;
-  background-color: white;
-  border: none;
-  border-radius: 0.8em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */

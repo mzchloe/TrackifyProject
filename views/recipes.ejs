@@ -1,20 +1,19 @@
 <h2>Find recipes to fill your calories goal</h2>
-Max calories in the recipe 
-<form action="/recipes/recipes" method="post"><input id="searchTerm" name="searchInput" type="text" placeholder="Enter search term" />
+<div class="search-recipes-container">
+  <form class="recipes-search-form" action="/recipes/recipes" method="post">
+    <input id="searchTerm" name="searchInput" type="text" placeholder="Search for recipes by calories" />
     <button id="search" type="submit">
-      Search
+      Show results
     </button>
-</form>
-
+  </form>
+</div>
 <% if (data) { %>
-    <% data.forEach((record) => { %>
-      <ul>
-        <li><%=record.recipe.label%></li>
-        <img src="<%= record.recipe.image %>">
-        <a href="<%= record.recipe.url %>">See the recipe here</a>
-      </ul>
-    <% }) %>
-  <% } %>
-  
-
+<% data.forEach((record) => { %>
+<ul>
+  <li><%=record.recipe.label%></li>
+  <img src="<%= record.recipe.image %>">
+  <a href="<%= record.recipe.url %>">See the recipe here</a>
+</ul>
+<% }) %>
+<% } %>
   

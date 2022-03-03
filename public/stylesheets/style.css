@@ -372,12 +372,17 @@ th {
 .edit-btn {
   background-color: #ffa45b;
   width: 50px;
+  cursor: pointer;
+  color: white; 
+  text-transform: uppercase;
 }
 
 .del-btn {
   border: 2px solid #ffa45b;
   background-color: white;
   width: 50px;  
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 /* Nutrition Diary Overview */
@@ -449,12 +454,13 @@ th {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-#add {
+#add-btn {
   font-size: 0.8em;
   font-weight: bold;
   width: 100px;   
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 /* Footer */

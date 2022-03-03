@@ -64,7 +64,7 @@ a {
   font-weight: bolder;
 }
 
-a.profilelinks {
+a.links {
   color: white;
 }
 
@@ -267,6 +267,7 @@ p {
   margin: 10px;
   height: 50px;
   width: 200px;
+  color: grey;
   background-color: #ffda77;
   border: none;
   border-radius: 0.8em;
@@ -284,7 +285,7 @@ p {
   margin: 10px;
   height: 50px;
   width: 200px;
-  color: white;
+  color: grey;
   background-color: #aee6e6;
   border: none;
   border-radius: 0.8em;
@@ -513,6 +514,11 @@ button {
   padding: 0px 10px 0px 10px;
   width: 200px;
   height: 100px;
+}
+
+.nutri-icons {
+  height: 30px;
+  width: 30px;
 }
 
  

@@ -4,10 +4,11 @@
     <div class="profile">
       <img src="https://media.istockphoto.com/vectors/cute-face-owl-icon-vector-id1207300277?b=1&k=20&m=1207300277&s=170667a&w=0&h=4kc1KUfLU-QWdK5Ah8PgI4Kgqc8-wFZpQWth_tAFLcI=" alt="profile-photo">
     </div>
-    <!-- <br>Email:</p> -->
-    <button class="crud-btns">Add photo</button>
+  <p>
+  <%= currentUser.email %></p> 
+ <!--    <button class="crud-btns">Add photo</button>
     <button class="crud-btns">Change email</button>
-    <button class="crud-btns">Change password</button>
+    <button class="crud-btns">Change password</button> -->
   </div>
   <div class="user-dashboard">
     <h2>My Dashboard</h2>
@@ -16,31 +17,24 @@
     <div class="report row">
         <% if (data) { %>
           <div class="summary-box calories-box"><%= data.totalCalories %>
-          <br><span class="name-tags">Total Calories</span></div>
+          <br><span class="name-tags">Calories</span></div>
           <div class="summary-box"><%= data.totalCarbs %>
           <br><span class="name-tags">Total Carbs</span></div>
           <div class="summary-box"> <%= data.totalFat %>
           <br><span class="name-tags">Total Fat</span></div>
           <div class="summary-box"><%= data.totalProtein %>
           <br><span class="name-tags">Total Protein</span></div>
-          <!-- <span>Total Calories <%= data.totalCalories %> </span> -->
-          <br>
-          <!-- <span>Total Carbs <%= data.totalCarbs %> </span> -->
-          <br>
-          <!-- <span>Total Fat <%= data.totalFat %> </span> -->
-          <br>
-          <!-- <span>Total Protein <%= data.totalProtein %> </span> -->
           <% } %>
     </div>
     <h3>Tracking</h3>
     <div class="tracking row">
-      <button class="track-btn"><a href="/nutri/tracknutrition" class="profilelinks">Nutrition</a></button>
+      <button class="track-btn"><a href="/nutri/tracknutrition" class="links">Nutrition</a></button>
       <button class="track-btn">Activity</button>
       <button class="track-btn">Sleep</button>
     </div>
     <h3>Recommendations</h3>
     <div class="recommendation row">
-      <button class="recommendation-btn"><a href="/recipes/recipes" class="recipelinks">Recipes</a></button>
+      <button class="recommendation-btn"><a href="/recipes/recipes" class="links">Recipes</a></button>
       <button class="recommendation-btn">Activity</button>
       <button class="recommendation-btn">Mindfulness</button>
     </div>

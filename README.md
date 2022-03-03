@@ -40,7 +40,7 @@ npm run start
 
 ## Authors
 
-* **Jeanet Lin** - 
+* **Jeanet Lin** - (https://github.com/mzchloe/)
 * **Patricia Cava** - (https://github.com/patricia-benites)
 
 ## License

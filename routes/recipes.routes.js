@@ -18,7 +18,7 @@ router.post("/recipes", isLoggedIn, async (req, res) => {
 }); 
 const searchInput = req.body.searchInput 
     const results = await client.search({ query: {calories: searchInput } }); 
-    const data = results["hits"].slice(0,5);
+    const data = results["hits"].slice(0,6);
 
     res.render("recipes", {data});
 })

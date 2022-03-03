@@ -19,7 +19,7 @@ router.post("/signup", async (req, res) => {
     await user.save();
     res.redirect("/user/login");
   } catch (error) {
-    let message = 'Incomplete registration, please try again';
+    let message = 'Incomplete registration, try again';
     res.render("signup", { message });
   }
 });
@@ -43,7 +43,7 @@ router.post("/login", async (req, res) => {
       res.render("login", { message });
     }
   } catch (error) {
-    let message = "No user found";
+    let message = "No user found, try again";
     res.render("login", { message });
   }
 });

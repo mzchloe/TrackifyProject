@@ -447,7 +447,6 @@ h3 {
     display: flex;
     padding: 10px;
     margin: 2px;
-    /* border: 1px solid black;  */
 }
 
 .recipes-search-form input,
@@ -473,11 +472,10 @@ button {
 
 ::placeholder {
   color: grey;
-}
+} 
 
 /* RECIPES PAGE > Results  */
-.results-container {
-  /* border: 1px solid yellow; */
+ .results-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -489,7 +487,6 @@ button {
 }
 
 .results-card {
-  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -504,37 +501,26 @@ button {
 
 .card-header img {
   justify-content: center;
-  /* border: 1px solid red; */
   height: 150px;
   margin-top: 30px;
   border-radius: 0.8em;
 }
 
 .card-body {
-  /* border: 1px solid blue; */
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0px 10px 0px 10px;
-  font-size: 0.85em;
   width: 200px;
   height: 100px;
 }
 
-/* #recipe-link {
-  font-size: 0.8em;
-  font-weight: bold;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
-}
- */
+ 
 
- a:hover {
+/*  a:hover {
    background-color: black;
    color: white;
- }
+ } */
 
 /* BUTTONS */
 

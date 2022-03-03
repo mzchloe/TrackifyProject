@@ -1,7 +1,7 @@
 <!-- <h2>Find recipes to fill your calories goal</h2> -->
 <div class="search-recipes-container">
   <form class="recipes-search-form" action="/recipes/recipes" method="post">
-    <input id="searchTerm" name="searchInput" type="text" placeholder="Search for recipes by calories..." />
+    <input id="searchTerm" name="searchInput" type="text" placeholder="Search for recipes ..." />
     <button id="search-btn" type="submit">
       Show results
     </button>
@@ -20,11 +20,11 @@
         </div>
         <div class="card-body">
         <h5><%=record.recipe.label.substring(0, 50)%></h5>
-          <p> Calories:
-            <%=record.recipe.calories.toFixed(0)%>
+    <!--       <p> Calories:
+            <%=record.recipe.calories.toFixed(0)%> -->
           <p>
             <!-- <button id="recipe-link"> -->
-            <a href="<%= record.recipe.url %>">See the recipe here</a>
+            <a id="recipe-link"href="<%= record.recipe.url %>">See the recipe here</a>
             <!-- </button> -->
     </li>
   </ul>

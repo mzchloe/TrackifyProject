@@ -447,7 +447,6 @@ h3 {
     display: flex;
     padding: 10px;
     margin: 2px;
-    /* border: 1px solid black;  */
 }
 
 .recipes-search-form input,
@@ -473,7 +472,55 @@ button {
 
 ::placeholder {
   color: grey;
+} 
+
+/* RECIPES PAGE > Results  */
+ .results-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
+
+.results-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 250px;
+  height: 300px;
+  margin: 50px;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-header img {
+  justify-content: center;
+  height: 150px;
+  margin-top: 30px;
+  border-radius: 0.8em;
+}
+
+.card-body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  width: 200px;
+  height: 100px;
+}
+
+ 
+
+ a:hover {
+   background-color: black;
+   color: white;
+ }
 
 /* BUTTONS */
 
@@ -515,7 +562,6 @@ button {
   text-transform: uppercase;
 }
 
-/* BUTTONS > Recipes Search Form */
 
 
 /* FOOTER */

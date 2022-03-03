@@ -1,19 +1,36 @@
-<h2>Find recipes to fill your calories goal</h2>
+<!-- <h2>Find recipes to fill your calories goal</h2> -->
 <div class="search-recipes-container">
   <form class="recipes-search-form" action="/recipes/recipes" method="post">
-    <input id="searchTerm" name="searchInput" type="text" placeholder="Search for recipes by calories..." />
+    <input id="searchTerm" name="searchInput" type="text" placeholder="Search ..." />
     <button id="search-btn" type="submit">
       Show results
     </button>
   </form>
 </div>
-<% if (data) { %>
-<% data.forEach((record) => { %>
-<ul>
-  <li><%=record.recipe.label%></li>
-  <img src="<%= record.recipe.image %>">
-  <a href="<%= record.recipe.url %>">See the recipe here</a>
-</ul>
-<% }) %>
+
+<div class="results-container">
+  <% if (data) { %>
+
+  <% data.forEach((record) => { %>
+  <ul>
+    <li>
+      <div class="results-card">
+        <div class="card-header">
+          <img src="<%= record.recipe.image %>">
+        </div>
+        <div class="card-body">
+        <h5><%=record.recipe.label.substring(0, 50)%></h5>
+         <!--  <p> Calories:
+            <%=record.recipe.calories.toFixed(0)%> -->
+          <p>
+            <!-- <button id="recipe-link"> -->
+            <a id="recipe-link"href="<%= record.recipe.url %>">See the recipe here</a>
+            <!-- </button> -->
+    </li>
+  </ul>
+  <% }) %>
+</div>
 <% } %>
-  
+
+</div>
+</div>

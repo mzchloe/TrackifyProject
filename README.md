@@ -3,9 +3,22 @@
 Trackify is an App with the purpose of tracking calories and macro nutrients from food as well as provide the user the possibility of searching for recipes with a calory target.
 It was developed as a requirement for the WEb Development Bootcamp Course by Ironhack
 
+### Features
+
+1. User can create an account by signing up
+2. User can login to use the features of the app
+3. User can logout 
+4. CRUD - user can add/edit/delete food entry per day and per meal, food/drink item, portion, portion unit, calories, carbs, fat and protein
+5. User can see nutrition diary overview 
+6. User can see the macro nutrition summary
+7. User can search for recipes 
+
+
 ## Getting Started
 
-Belowyou can find instructions to get the project up and running on your local machine for development and testing purposes.
+Below you can find instructions to get the project up and running on your local machine for development and testing purposes.
+
+
 
 ### Prerequisites
 

@@ -106,7 +106,7 @@ ul li {
 
 ul li button {
   margin-left: auto;
-  padding: 10px 16px;
+  padding: 0px 10px 1px 16px;
   border: none;
   background: #ffa45b;
   color: #fbf6f0;
@@ -595,7 +595,9 @@ button {
   text-transform: uppercase;
 }
 
+.signup-btn {
 
+}
 
 /* FOOTER */
 .footer {

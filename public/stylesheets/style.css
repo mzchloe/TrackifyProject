@@ -106,7 +106,6 @@ ul li {
 
 ul li button {
   margin-left: auto;
-  padding: 0px 10px 1px 16px;
   border: none;
   background: #ffa45b;
   color: #fbf6f0;
@@ -117,6 +116,7 @@ ul li button {
   width: 200px;
   cursor: pointer;
   margin-left: 500px;
+  align-items: center;
 }
 
 .box {
@@ -178,7 +178,7 @@ text {
   background-color: #fbf6f0;
 }
 
-/* >>User info */
+/* PROFILE PAGE > User info */
 .user-info {
   /* border: 1px solid green; */
   background-color: white;
@@ -382,11 +382,14 @@ button {
   width: 180px;
 }
 
-#edit-portion, #edit-calories, #edit-protein {
+#edit-portion, 
+#edit-unit, 
+#edit-calories, 
+#edit-protein {
   width: 80px;
 }
 
-#edit-unit, #edit-fat {
+#edit-fat {
   width: 60px;
 }
 /* DAILY NUTRITION OVERVIEW  */
@@ -444,10 +447,6 @@ h3 {
   font-size: 1em;
   font-weight: 900;
 }
-
-/* .diary {
-  border: 1px solid black;
-} */
 
 
 
@@ -548,13 +547,6 @@ button {
   width: 30px;  
 }
 
- 
-
-/*  a:hover {
-   background-color: black;
-   color: white;
- } */
-
 /* BUTTONS */
 
 /* BUTTONS > Profile section */
@@ -591,13 +583,10 @@ button {
   border: 2px solid #ffa45b;
   background-color: white;
   width: 60px;
-  cursor: pointer;
+  cursor: pointer; 
   text-transform: uppercase;
 }
 
-.signup-btn {
-
-}
 
 /* FOOTER */
 .footer {

@@ -2,8 +2,8 @@
 <div class="edit-food-form">
     <form class="edit-form" action="/nutri/update/<%= food.id %>?_method=PUT" method="post">
         <input type="text" name="foodType" placeholder="Food/drink item" id="edit-food-item"/>
-        <input type="number" name="portion" placeholder="portion" id="edit-portion"/>
-        <input type="text" name="portionUnit" placeholder="portion unit" id="edit-unit"/>
+        <input type="number" name="portion" placeholder="amount" id="edit-portion"/>
+        <input type="text" name="portionUnit" placeholder="gram/ml" id="edit-unit"/>
         <input type="number" name="calories" placeholder="calories" id="edit-calories"/>
         <input type="number" name="carbs" placeholder="carbs" id="carbs"/>
         <input type="number" name="fat" placeholder="fat" id="edit-fat"/>
